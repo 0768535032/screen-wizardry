@@ -3,6 +3,8 @@ import { Header } from "@/components/Header";
 import { CategoryCard } from "@/components/CategoryCard";
 import { SupplierCarousel } from "@/components/SupplierCarousel";
 import { Footer } from "@/components/Footer";
+import { Filter } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const categories = [
   {
@@ -71,6 +73,17 @@ const Index = () => {
               </div>
             </div>
           </motion.div>
+        </section>
+
+        {/* Filter Section */}
+        <section className="container mx-auto px-4 py-6">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl font-semibold">Browse Categories</h2>
+            <Button variant="ghost" className="flex items-center space-x-2">
+              <Filter className="h-4 w-4" />
+              <span>Filter</span>
+            </Button>
+          </div>
         </section>
 
         {/* Categories Section */}
