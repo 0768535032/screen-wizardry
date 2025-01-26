@@ -3,24 +3,24 @@ import { Header } from "@/components/Header";
 import { CategoryCard } from "@/components/CategoryCard";
 import { SupplierCarousel } from "@/components/SupplierCarousel";
 import { Footer } from "@/components/Footer";
-import { Filter } from "lucide-react";
+import { Filter, ArrowUpDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const categories = [
   {
     title: "Groceries",
     image: "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1000",
-    href: "/groceries"
+    href: "https://external-groceries-link.com"
   },
   {
     title: "Local Eateries",
     image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1000",
-    href: "/eateries"
+    href: "https://external-eateries-link.com"
   },
   {
     title: "Retail Goods",
     image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1000",
-    href: "/retail"
+    href: "https://external-retail-link.com"
   }
 ];
 
@@ -29,7 +29,7 @@ const Index = () => {
     <div className="min-h-screen bg-black text-white">
       <Header />
       
-      <main className="pt-20">
+      <main className="pt-32">
         {/* Hero Section */}
         <section className="container mx-auto px-4 py-12">
           <motion.div
@@ -78,10 +78,13 @@ const Index = () => {
         {/* Filter Section */}
         <section className="container mx-auto px-4 py-6">
           <div className="flex items-center justify-between">
-            <h2 className="text-xl font-semibold">Browse Categories</h2>
             <Button variant="ghost" className="flex items-center space-x-2">
               <Filter className="h-4 w-4" />
               <span>Filter</span>
+            </Button>
+            <Button variant="ghost" className="flex items-center space-x-2">
+              <ArrowUpDown className="h-4 w-4" />
+              <span>Sort</span>
             </Button>
           </div>
         </section>
